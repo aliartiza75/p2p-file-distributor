@@ -1,0 +1,36 @@
+//				delete obj1;
+			}
+
+
+		}
+
+
+		//************************************************
+/*
+		cout<<"Connecting with peer";
+
+		Client *myClient1=new Client(port);
+		cout<<"***";
+
+		(*myClient1).initialize();
+
+		string str=	"Hellow ,this message is from client 1";
+		Packet *obj1=new Packet();
+		(*obj1).a=10;
+		(*obj1).b=400;
+
+		for(int i=0;i<100;i++)
+		{
+			obj1[0].message[i]='a';
+
+		}
+		(*myClient1).message(*obj1);
+		//(*myClient).show();
+		(*myClient1).send(50);
+
+*/
+
+
+exit (0);
+}
+

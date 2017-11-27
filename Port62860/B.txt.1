@@ -1,0 +1,18 @@
+				filename.append((*myClient).obj->file);
+
+				count++;
+
+
+
+
+				delete myClient;
+				delete obj;
+
+
+				ofstream f(filename.c_str());
+				cout<<"File name:"<<filename<<endl;
+
+				Client *myClient1=new Client(port);
+				(*myClient1).initialize();
+
+				Packe

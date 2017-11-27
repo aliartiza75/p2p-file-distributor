@@ -1,0 +1,13 @@
+g message;
+			int ten=0;
+
+			do{
+					(*myClient1).recieve(50);
+					f<<(*myClient1).obj->message<<endl;
+					message=(*myClient1).obj->message;
+					ten++;
+			}while((strcmp(message.c_str(),"$$$$")!=0));
+
+				//f.close();
+//				break;
+//				delete myClient

@@ -1,0 +1,29 @@
+nversation";
+		Client *myClient=new Client();
+		(*myClient).initialize();
+
+		Packet *obj=new Packet();
+
+		for(int i=0;i<100;i++){
+			(*obj).message[i];
+		}
+		(*myClient).message(*obj);
+		(*myClient).send(50); //inititate conversation
+
+
+		int count=0;
+		while(1)
+		{
+//			count++;
+			(*myClient).recieve(50);
+			//cout<<"Server Send:"<<(*myClient).obj->message<<(*myClient).obj->port<<(*myClient).obj->file<<(*myClient).obj->chunk<<endl;
+
+			int pid=fork();
+
+			if(pid!=0)
+			{
+
+				int port=(*myClient).obj->port;
+				int chunk=(*myClient).obj->chunk;
+				string  filename="";
+				filename="Client/";

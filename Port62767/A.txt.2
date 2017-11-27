@@ -1,0 +1,41 @@
+dr.sin_port = port;
+		serv_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+
+
+	}
+
+	public: void send(int size){
+
+		int servlen=sizeof(serv_addr);
+		int a=sendto(sockfd,obj,sizeof(struct Packet), 0, (struct sockaddr*)&serv_addr ,servlen);
+
+	}
+
+	public: void recieve(int size)
+	{
+		int addrlen=sizeof(addr);
+		int a=recvfrom(sockfd,obj,sizeof(struct Packet),0, (struct sockaddr*)& addr ,(socklen_t *) & addrlen);
+
+
+	}
+
+	public :Packet show(){
+		//cout<<obj[0].a<<obj[0].b<<obj[0].message<<endl;
+		return *obj;
+
+
+	}
+
+	public :void message(Packet a){
+		*obj=a;
+
+	}
+
+
+};
+
+
+int main()
+{
+
+		cout<<"Initiate Co

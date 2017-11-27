@@ -1,0 +1,43 @@
+/*
+ * Client.cpp
+ *
+ *  Created on: Nov 11, 2015
+ *      Author: waleed
+ */
+#include "unp.h"
+#include <iostream>
+#include<cstring>
+#include<fstream>
+#include <sstream>
+#include "Packet.cpp"
+
+using namespace std;
+
+class Client{
+	int sockfd;
+	struct sockaddr_in serv_addr;
+	struct sockaddr_in addr;
+	int port;
+
+public :Packet *obj;
+
+	public: Client(){
+		port=1000;
+		obj=new Packet();
+	}
+	public: Client(int portno){
+		port=portno;
+		obj=new Packet();
+	}
+	~Client(){
+		close(sockfd);
+
+
+	}
+
+
+	public: void initialize(){
+
+		sockfd=socket(AF_INET,SOCK_DGRAM,0);
+		serv_addr.sin_family = AF_INET;
+		serv_ad

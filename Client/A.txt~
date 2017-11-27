@@ -1,0 +1,120 @@
+/*
+ * Client.cpp
+ *
+ *  Created on: Nov 11, 2015
+ *      Author: waleed
+ */
+#include "unp.h"
+#include <iostream>
+#include<cstring>
+#include<fstream>
+#include <sstream>
+#include "Packet.cpp"
+
+using namespace std;
+
+class Client{
+	int sockfd;
+	struct sockaddr_in serv_addr;
+	struct sockaddr_in addr;
+	int port;
+
+public :Packet *obj;
+
+	public: Client(){
+		port=1000;
+		obj=new Packet();
+	}
+	public: Client(int portno){
+		port=portno;
+sation"<<endl;
+.sin_port = port;
+		obj=new Packet();
+	}
+		Client *myClient=new Client();
+	~Client(){
+		(*myClient).initialize();
+		close(sockfd);
+
+
+		Packet *obj=new Packet();
+
+
+	}
+		for(int i=0;i<100;i++){
+
+			(*obj).message[i];
+
+		}
+	public: void initialize(){
+		serv_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+
+
+
+		sockfd=socket(AF_INET,SOCK_DGRAM,0);
+	}
+		serv_addr.sin_family = AF_INET;
+		(*myClient).message(*obj);
+
+		serv_addr
+		(*myClient).send(50); //inititate conversation
+	public: void send(int size){
+		serv_addr
+
+
+
+		int servlen=sizeof(serv_addr);
+		int count=0;
+		int a=sendto(sockfd,obj,sizeof(struct Packet), 0, (struct sockaddr*)&serv_addr ,servlen);
+		while(1)
+
+		{
+	}
+
+//			count++;
+	public: void recieve(int size)
+			(*myClient).recieve(50);
+	{
+			//cout<<"Server Send:"<<(*myClient).obj->message<<(*myClient).obj->port<<(*myClient).obj->file<<(*myClient).obj->chunk<<endl;
+		int addrlen=sizeof(addr);
+
+		int a=recvfrom(sockfd,obj,sizeof(struct Packet),0, (struct sockaddr*)& addr ,(socklen_t *) & addrlen);
+			int pid=fork();
+
+
+
+
+			if(pid!=0)
+
+	}
+			{
+
+
+
+
+	public :Packet show(){
+				int port=(*myClient).obj->port;
+		//cout<<obj[0].a<<obj[0].b<<obj[0].message<<endl;
+				int chunk=(*myClient).obj->chunk;
+		return *obj;
+				string  filename="";
+
+				filename="Client/";
+
+				filename="Client/";
+	}
+
+	public :void message(Packet a){
+		*obj=a;
+
+	}
+
+
+};
+
+
+int main()
+{
+
+		cout<<"Initiate Conver
+		cout<<"Initiate Conver
